@@ -1,4 +1,7 @@
+
 # Spinning Sombrero Surface
+<img width="1378" height="905" alt="2025-12-08_11-27-24" src="https://github.com/user-attachments/assets/a90fbfd5-eafd-4300-915c-453ce6a1ca26" />
+
 
 An animated ripple surface rendered with Pygame. The mesh spins in place about the Z axis, then receives a camera-like tilt so you see it in perspective. Hidden-line rendering keeps nearer faces in front, and edges are colorized by height using an HSV gradient (low = blue, high = red) to highlight the central peak.
 
